@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         //TODO: implement Comparable in your class, make Collections.sort(m.arrS)
+        //Comparable - для сортировки по умолчанию. Класс, объекты которого будут сортироваться, должен реализовать этот интерфейс и переопределить метод, в котором указывается поле класса для сравнения.
         Main m = new Main();
         Random rand = new Random();
         Students jeff = new Students("Jeff", "18", "male");
@@ -21,9 +22,10 @@ public class Main {
         m.arrS.add(nick);
 
         Collections.sort(m.arrS);
+        System.out.println("Sorting by age: ");
 
         for (int i = 0; i <m.arrS.size() ; i++) {
-            System.out.println(m.arrS.get(i).getAge());
+            System.out.println(m.arrS.get(i).getName()+", "+m.arrS.get(i).getAge());
         }
 
 
